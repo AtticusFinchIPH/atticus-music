@@ -9,7 +9,6 @@ import Player from './page/player/Player';
 const spotify = new SpotifyWebApi();
 
 function App() {
-  // const [token, setToken] = useState(null);
   const [dataLayer, dispatch] = useDataLayerValue();
   const { user, token } = dataLayer;
 
@@ -34,7 +33,7 @@ function App() {
           type: 'SET_PLAYLISTS',
           playlists,
         })
-      })
+      });
     }
   }, []);
   return (
